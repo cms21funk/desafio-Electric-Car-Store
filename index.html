@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquor Store Chile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="assets/img/chile_flag.JPG" alt="Bandera de Chile" class="chile-flag">
+            <h5>Liquor Store Chile</h5>
+            <nav class="nav">
+                <button class="hamburger-menu" onclick="toggleMenu()">&#9776;</button>
+                <ul id="nav-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside class="sidebar">
+            <ul id="vertical-menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="sort-options">
+                <p>Ordenar por:</p>
+                <select>
+                    <option value="precio">Precio</option>
+                    <option value="categorias">Categorías</option>
+                </select>
+            </div>
+            <div class="product-grid">
+                <!-- Productos -->
+                <div class="product-card">
+                    <img src="assets/img/product11.jpg" alt="Cerveza Delirium Tremens 8.5° 330cc">
+                    <h6>Cerveza Delirium Tremens 8.5° 330cc</h6>
+                    <p>$3.990</p>
+                    <button class="btn btn-primary d-grid gap-2" type="button">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/img/product22.jpg" alt="Cerveza Viejo Lobo 375cc">
+                    <h6>Cerveza Artesanal Viejo Lobo 375cc</h6>
+                    <p>$3.990</p>
+                    <button class="btn btn-primary d-grid gap-2" type="button">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/img/product33.jpg" alt="Delirium Red 8° 330cc">
+                    <h6>Cerveza Artesanal Delirium Red 8° 330cc</h6>
+                    <p>$3.990</p>
+                    <button class="btn btn-primary d-grid gap-2" type="button">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/img/product88.jpg" alt="Pisco Alto del Carmen Transparente 40° 750cc">
+                    <h6>Pisco Alto del Carmen Transparente 40° 750cc</h6>
+                    <p>$7.490</p>
+                    <button class="btn btn-primary d-grid gap-2" type="button">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/img/product99.jpg" alt="Pisco Bou Legado Especial 35 750cc">
+                    <h6>Pisco Bou Legado Especial 35 750cc</h6>
+                    <p>$11.990</p>
+                    <button class="btn btn-primary d-grid gap-2" type="button">Comprar</button>
+                </div>                                                
+                <div class="product-card">
+                    <img src="assets/img/product100.jpg" alt="Pisco Malpaso Especial 35º 750ml">
+                    <h6>Pisco Malpaso Especial 35º 750ml</h6>
+                    <p>$7.890</p>
+                    <button class="btn btn-primary d-grid gap-2" type="button">Comprar</button>
+                </div>                                                
+                <div class="product-card">
+                    <img src="assets/img/product103.jpg" alt="Bebida Coca Cola Sin Azúcar 1.5lt">
+                    <h6>Bebida Coca Cola Sin Azúcar 1.5lt</h6>
+                    <p>$1.990</p>
+                    <button class="btn btn-primary d-grid gap-2" type="button">Comprar</button>
+                </div>                                                
+                <div class="product-card">
+                    <img src="assets/img/product104.jpg" alt="Bebida Canada Dry Agua Tónica Zero 1.5lt">
+                    <h6>Bebida Canada Dry Agua Tónica Zero 1.5lt</h6>
+                    <p>$1.990</p>
+                    <button class="btn btn-primary d-grid gap-2" type="button">Comprar</button>
+                </div>                                                
+                <!-- Agrega más productos... -->
+            </div>
+            <div class="pagination">
+                <button>&laquo; Anterior</button>
+                <span>Página 1 de 10</span>
+                <button>Siguiente &raquo;</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Liquor Store Chile 2024. All right reserved</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
+
