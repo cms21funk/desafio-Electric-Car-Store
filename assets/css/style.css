@@ -1,0 +1,281 @@
+/* CSS base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main-content main-content"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: greenyellow;
+    color: red;
+    font-weight: bolder;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chile-flag {
+    width: 30px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.nav {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.nav ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: red;
+    cursor: pointer;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f9ffa637;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-content {
+    grid-area: main-content;
+    padding: 1rem;
+}
+
+.sort-options {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sort-options select {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.product-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 4px;
+}
+
+.product-card p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-card button {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    font-weight: bold;
+    background-color: greenyellow;
+    color: red;
+    font-size: small;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.product-card button:hover {
+    background-color: green;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: greenyellow;
+    color: red;
+    text-align: center;
+    padding: 1rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.pagination button {
+    background-color: greenyellow;
+    color: red;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+}
+
+.pagination button:hover {
+    background-color: green;
+}
+
+.pagination span {
+    font-weight: bold;
+}
+
+/* Desktop (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .nav {
+        display: none;
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .sidebar {
+        display: flex;
+    }
+}
+
+/* Tablet (576px <= width <= 992px) */
+@media (min-width: 576px) and (max-width: 992px) {
+    .container {
+        grid-template-areas:
+            "header header header"
+            "main-content main-content main-content"
+            "footer footer footer";
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        justify-content: flex-start;
+        padding-left: 1rem;
+    }
+
+    .nav {
+        position: static;
+        margin-left: auto;
+    }
+
+    .nav ul {
+        justify-content: flex-end;
+        margin-top: 1rem;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+    .container {
+        grid-template-areas:
+            "header header header"
+            "main-content main-content main-content"
+            "footer footer footer";
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        justify-content: space-between;
+        padding-left: 1rem;
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: greenyellow;
+        padding: 1rem;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+    }
+
+    .nav ul.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
